@@ -8,6 +8,7 @@
 
   <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
   <audio id="sound1">
   	<source src=""></source>
@@ -24,20 +25,21 @@
 </head>
 
 <body>
-
+ 
   <div id="outer-circle">
     <div id="topleft"></div>
     <div id="topright"></div>
     <div id="bottomleft"></div>
     <div id="bottomright"></div>
     <div id="inner-circle">
-      <div id="title" class="font">SIMON!</div>
+      <div id="title" class="font">SKYSIMON!</div>
       <div id="switches">
         <input type="checkbox" class="toggle" id="on">
+        
         <button class="button" id="start">Start</button>
         <input type="checkbox" class="toggle" id="strict">
       </div>
-      <div class="text1">
+      <div class="poweron">
         <span>POWER</span><span>STRICT</span>
       </div>
       <div id="turn"></div>
@@ -46,8 +48,7 @@
       </div>
     </div>
   </div>
-
-  <script  src="js/index.js"></script>
+<script  src="js/index.js"></script>
 
 </body>
 </html>
