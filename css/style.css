@@ -10,8 +10,9 @@
   width: 40em;
   margin-top: 5em;
   padding-top: 3em;
-  margin-left:28em;
+  
   border-radius:1em;
+  vertical-align: middle;
 }
 
 .toggle {
@@ -35,7 +36,7 @@
 #switches {
   position: absolute;
   font-family: 'Rubik';
-  margin-left: 2.0em;
+  margin-left: 1.8em;
   margin-top: 6.875em;
   
   
@@ -75,7 +76,7 @@
   font-size: 1.1em;
   height: 1.875em;
   width: 3.2em;
-  margin-left: 5.5em;
+  margin-left: 5.2em;
   margin-top: 9.3em;
   text-align: center;
   vertical-align: middle;
