@@ -7,7 +7,7 @@
   -o-background-size: cover;
   background-size: cover;
   height: 40em;
-  
+  width: 40em;
   margin-top: 5em;
   padding-top: 3em;
   margin-left:28em;
@@ -16,7 +16,7 @@
 }
 
 .toggle {
-  margin-left: 0.8em;
+  margin-left: 1.5em;
   margin-right: 1.2em;
   width: 1.2em;
   height: 1.2em;
@@ -36,7 +36,7 @@
 #switches {
   position: absolute;
   font-family: 'Rubik';
-  margin-left: 1.8em;
+  margin-left: 3.6em;
   margin-top: 6.875em;
   
   
