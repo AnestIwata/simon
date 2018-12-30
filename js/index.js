@@ -22,6 +22,18 @@ const strictButton = document.querySelector("#strict");
 const onButton = document.querySelector("#on");
 const startButton = document.querySelector("#start");
 
+//Added functionality of power button, when ON it will display three dashes in countTurn window.
+onButton.addEventListener('click', (event) => {
+  if (onButton.checked == true) {
+    on = true;
+    countTurn.innerHTML = "---";
+  } else {
+    on = false;
+    countTurn.innerHTML = "";
+  }
+});
+
+//Strict button function applied
 strictButton.addEventListener('click', (event) => {
     if (strictButton.checked == true) {
         strict = true; 
@@ -30,14 +42,4 @@ strictButton.addEventListener('click', (event) => {
         }
 })
 
-onButton.addEventListener('click', (event) => {
-  if (onButton.checked == true) {
-    on = true;
-    countTurn.innerHTML = "---";
-  } else {
-    on = false;
-    countTurn.innerHTML = "";
-    
-  }
-});
 
