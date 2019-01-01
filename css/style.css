@@ -29,6 +29,14 @@
   border-width: 0.1em;
 }
 
+input[type="checkbox"]{
+  opacity: 0;
+  width: 0;
+}
+
+label[for="on"], label[for="strict"] {
+  background: url(..assets/pictures/checks.png);
+}
   
 
 #switches {

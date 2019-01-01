@@ -30,6 +30,7 @@ onButton.addEventListener('click', (event) => {
   } else {
     on = false;
     countTurn.innerHTML = "";
+    clearColor();
   }
 });
 
@@ -42,4 +43,14 @@ strictButton.addEventListener('click', (event) => {
         }
 })
 
+//Functionality od power button
+$(document).ready(function() {
+  $(".startButton").click(function() {
+    if (on == win) {
+    play();
+      }
+  })
+})
+
+play function
 
