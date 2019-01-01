@@ -46,11 +46,16 @@ strictButton.addEventListener('click', (event) => {
 //Functionality od power button
 $(document).ready(function() {
   $(".startButton").click(function() {
-    if (on == win) {
+    if (on == winner) {
     play();
       }
   })
 })
 
-play function
+function play(){
+  winner = false;
+  order = [];
+  userOrder =[];
+  flash = 0;
+}
 
