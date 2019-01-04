@@ -4,11 +4,8 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 40em;
-  width: 40em;
-  margin-top: 5em;
-  padding-top: 3em;
-  margin-left:28em;
+ 
+  
   border-radius:1em;
   margin: auto;
 }

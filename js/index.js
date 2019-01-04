@@ -46,7 +46,7 @@ strictButton.addEventListener('click', (event) => {
 //Functionality od power button
 $(document).ready(function() {
   $(".startButton").click(function() {
-    if (on == winner) {
+    if (on || winner) {
     play();
       }
   })
