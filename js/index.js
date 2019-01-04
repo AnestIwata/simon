@@ -10,7 +10,7 @@ let strict = false; //Checks if strict button was applied
 let sound = true; //Manages sounds in the game 
 let on = false; //Checks if power button was pressed
 let winner; //Checks if user have won the game 
-
+onButton = 0;
 //Referencing  all html elements in JavaScript
 
 const countTurn = document.querySelector("#turn");
@@ -21,7 +21,6 @@ const bottomRight = document.querySelector("#bottomright");
 const strictButton = document.querySelector("#strict");
 const onButton = document.querySelector("#on");
 const startButton = document.querySelector("#start");
-
 //Added functionality of power button, when ON it will display three dashes in countTurn window.
 onButton.addEventListener('click', (event) => {
   if (onButton.checked == true) {
@@ -33,7 +32,6 @@ onButton.addEventListener('click', (event) => {
     clearColor();
   }
 });
-
 //Strict button function applied
 strictButton.addEventListener('click', (event) => {
     if (strictButton.checked == true) {
@@ -42,7 +40,6 @@ strictButton.addEventListener('click', (event) => {
         strict = false;
         }
 })
-
 //Functionality od power button
 $(document).ready(function() {
   $(".startButton").click(function() {
@@ -50,12 +47,17 @@ $(document).ready(function() {
     play();
       }
   })
-})
 
 function play(){
   winner = false;
   order = [];
+  good = true;
+  countTurn.innerHTML = 1; 
   userOrder =[];
-  flash = 0;
+  highlight = 0;
+  turn = 1;
+  for (var i = 0; i < 20; i++){
+    order.push(Math.floor(Math.random() * 4 ) + 1);
 }
+
 
