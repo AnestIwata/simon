@@ -76,24 +76,29 @@ function play(){
     if (compTurn) { //When it's still games turn 
     clearColor();
     setTimeout(() => {
-      if (order[flash] == 1) {  //Fuction responsible for flashing top left button 
+      if (order[flash] == 1) {  //Function responsible for flashing top left button 
         firstFunction();
       }
-      if (order[flash] == 2) {  //Fuction responsible for flashing top right button 
+      if (order[flash] == 2) {  //Function responsible for flashing top right button 
         secondFunction();
       }
-      if (order[flash] == 3) {  //Fuction responsible for flashing bottom leftbutton
+      if (order[flash] == 3) {  //Function responsible for flashing bottom leftbutton
         thirdFunction();
       }
-      if (order[flash] == 4) {  //Fuction responsible for flashing bottom right button
+      if (order[flash] == 4) {  //Function responsible for flashing bottom right button
         fourrthFunction();
       }
       flash++;
     }, 150);
   }
 }
+  function firstFunction(){
+    if (noise){
+      var audio = document.getElementById("sound1"); //Selects first mp3 file chosen for a button
+      audio.play(); //Funtion that will play audio 
+    }
+    noise = true;
   
- 
  
  
  
