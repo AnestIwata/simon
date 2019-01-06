@@ -10,7 +10,8 @@ let strict = false; //Checks if strict button was applied
 let sound = true; //Manages sounds in the game 
 let on = false; //Checks if power button was pressed
 let winner; //Checks if user have won the game 
-onButton = 0;
+let clearColor; //It will clear the colors of the buttons 
+
 //Referencing  all html elements in JavaScript
 
 const countTurn = document.querySelector("#turn");
@@ -21,6 +22,7 @@ const bottomRight = document.querySelector("#bottomright");
 const strictButton = document.querySelector("#strict");
 const onButton = document.querySelector("#on");
 const startButton = document.querySelector("#start");
+
 //Added functionality of power button, when ON it will display three dashes in countTurn window.
 onButton.addEventListener('click', (event) => {
   if (onButton.checked == true) {
@@ -29,9 +31,11 @@ onButton.addEventListener('click', (event) => {
   } else {
     on = false;
     countTurn.innerHTML = "";
+    clearInterval(sequence);
     clearColor();
   }
 });
+
 //Strict button function applied
 strictButton.addEventListener('click', (event) => {
     if (strictButton.checked == true) {
@@ -40,24 +44,41 @@ strictButton.addEventListener('click', (event) => {
         strict = false;
         }
 })
-//Functionality od power button
-$(document).ready(function() {
-  $(".startButton").click(function() {
+
+// Start button function 
+startButton.addEventListener('click', (event) => {
     if (on || winner) {
     play();
-      }
-  })
-
+    }
+})
+//First round of game
 function play(){
-  winner = false;
+  winner = false; //user have not win the game yet
   order = [];
   good = true;
   countTurn.innerHTML = 1; 
   userOrder =[];
-  highlight = 0;
+  flash = 0;
   turn = 1;
-  for (var i = 0; i < 20; i++){
+  for (var i = 0; i < 20; i++){   //Creates an array of 20 numers from 1 to 4 
     order.push(Math.floor(Math.random() * 4 ) + 1);
 }
-
-
+  gameTurn = true; //Game will start the sequence and the user will have to repeat it 
+  sequence = setInterval(computerTurn , 870); //This sequence sets the interval of flashing lights in game 
+}
+  function computerTurn() {
+    
+  }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
