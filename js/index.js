@@ -67,8 +67,32 @@ function play(){
   sequence = setInterval(computerTurn , 870); //This sequence sets the interval of flashing lights in game 
 }
   function computerTurn() {
-    
+    on = false;   //When on is false user is prohibited from pressing a button 
+    if (flash == turn){   //
+      clearInterval(sequence); //Clears sequence when games turn is over
+      gameTurn = false; 
+      clearColor(); //Clears lit up buttons
+      on = true; //User can start repeating the sequence 
+    if (compTurn) { //When it's still games turn 
+    clearColor();
+    setTimeout(() => {
+      if (order[flash] == 1) {  //Fuction responsible for flashing top left button 
+        firstFunction();
+      }
+      if (order[flash] == 2) {  //Fuction responsible for flashing top right button 
+        secondFunction();
+      }
+      if (order[flash] == 3) {  //Fuction responsible for flashing bottom leftbutton
+        thirdFunction();
+      }
+      if (order[flash] == 4) {  //Fuction responsible for flashing bottom right button
+        fourrthFunction();
+      }
+      flash++;
+    }, 150);
   }
+}
+  
  
  
  
