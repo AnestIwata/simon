@@ -10,8 +10,7 @@ let strict = false; //Checks if strict button was applied
 let sound = true; //Manages sounds in the game 
 let on = false; //Checks if power button was pressed
 let winner; //Checks if user have won the game 
-let clearColor; //It will clear the colors of the buttons 
-
+ 
 //Referencing  all html elements in JavaScript
 
 const countTurn = document.querySelector("#turn");
@@ -73,7 +72,8 @@ function play(){
       gameTurn = false; 
       clearColor(); //Clears lit up buttons
       on = true; //User can start repeating the sequence 
-    if (compTurn) { //When it's still games turn 
+    }
+    if (gameTurn) { //When it's still games turn 
     clearColor();
     setTimeout(() => {
       if (order[flash] == 1) {  //Function responsible for flashing top left button 
@@ -86,18 +86,53 @@ function play(){
         thirdFunction();
       }
       if (order[flash] == 4) {  //Function responsible for flashing bottom right button
-        fourrthFunction();
+        fourthFunction();
       }
       flash++;
     }, 150);
   }
 }
+
+function clearColor() {
+  topLeft.style.backgroundColor = "url(../assets/pictures/2overlayDark.jpg')";
+  topRight.style.backgroundColor = "url('../assets/pictures/3overlayDark.jpg')";
+  bottomLeft.style.backgroundColor = "url('../assets/pictures/4overlayDark.jpg')";
+  bottomRight.style.backgroundColor = "url('../assets/pictures/5overlayDark.jpg')";
+}
  function firstFunction(){
-    if (noise){
+    if (sound){
       var audio = document.getElementById("sound1"); //Selects first mp3 file chosen for a button
       audio.play(); //Funtion that will play audio 
     }
-    noise = true;
+    sound = true;
+    topLeft.style.backgroundColor = "url('../assets/pictures/2overlayLight.jpg')"; //Light overlay background photo 
+  }
+  
+  function secondFunction(){
+    if (sound){
+      var audio = document.getElementById("sound2"); //Selects first mp3 file chosen for a button
+      audio.play(); //Funtion that will play audio 
+    }
+    sound = true;
+    topRight.style.backgroundColor = "url('../assets/pictures/3overlayLight.jpg')"; //Light overlay background photo 
+  }
+  
+  function thirdFunction(){
+    if (sound){
+      var audio = document.getElementById("sound3"); //Selects first mp3 file chosen for a button
+      audio.play(); //Funtion that will play audio 
+    }
+    sound = true;
+    bottomLeft.style.backgroundColor = "url('../assets/pictures/4overlayLight.jpg')"; //Light overlay background photo 
+  }
+  
+  function fourthFunction(){
+    if (sound){
+      var audio = document.getElementById("sound4"); //Selects first mp3 file chosen for a button
+      audio.play(); //Funtion that will play audio 
+    }
+    sound = true;
+    bottomRight.style.backgroundColor = "url('../assets/pictures/5overlayLight.jpg')"; //Light overlay background photo 
   }
  
   
