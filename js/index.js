@@ -10,6 +10,8 @@ let strict = false; //Checks if strict button was applied
 let sound = true; //Manages sounds in the game 
 let on = false; //Checks if power button was pressed
 let winner; //Checks if user have won the game 
+
+
  
 //Referencing  all html elements in JavaScript
 
@@ -63,7 +65,7 @@ function play(){
     order.push(Math.floor(Math.random() * 4 ) + 1);
 }
   gameTurn = true; //Game will start the sequence and the user will have to repeat it 
-  sequence = setInterval(computerTurn , 870); //This sequence sets the interval of flashing lights in game 
+  sequence = setInterval(computerTurn , 2000); //This sequence sets the interval of flashing lights in game 
 }
   function computerTurn() {
     on = false;   //When on is false user is prohibited from pressing a button 
@@ -89,15 +91,15 @@ function play(){
         fourthFunction();
       }
       flash++;
-    }, 150);
+    }, 300);
   }
 }
 
 function clearColor() {
-  topLeft.style.backgroundColor = "url(../assets/pictures/2overlayDark.jpg')";
-  topRight.style.backgroundColor = "url('../assets/pictures/3overlayDark.jpg')";
-  bottomLeft.style.backgroundColor = "url('../assets/pictures/4overlayDark.jpg')";
-  bottomRight.style.backgroundColor = "url('../assets/pictures/5overlayDark.jpg')";
+  topLeft.style.backgroundImage = "url(../assets/pictures/2overlayDark.jpg')";
+  topRight.style.backgroundImage = "url('../assets/pictures/3overlayDark.jpg')";
+  bottomLeft.style.backgroundImage = "url('../assets/pictures/4overlayDark.jpg')";
+  bottomRight.style.backgroundImage = "url('../assets/pictures/5overlayDark.jpg')";
 }
  function firstFunction(){
     if (sound){
@@ -105,7 +107,7 @@ function clearColor() {
       audio.play(); //Funtion that will play audio 
     }
     sound = true;
-    topLeft.style.backgroundColor = "url('../assets/pictures/2overlayLight.jpg')"; //Light overlay background photo 
+    topLeft.style.backgroundImage = "url('../assets/pictures/2overlayLight.jpg')"; //Light overlay background photo 
   }
   
   function secondFunction(){
@@ -114,7 +116,7 @@ function clearColor() {
       audio.play(); //Funtion that will play audio 
     }
     sound = true;
-    topRight.style.backgroundColor = "url('../assets/pictures/3overlayLight.jpg')"; //Light overlay background photo 
+    topRight.style.backgroundImage = "url('../assets/pictures/3overlayLight.jpg')"; //Light overlay background photo 
   }
   
   function thirdFunction(){
@@ -123,7 +125,7 @@ function clearColor() {
       audio.play(); //Funtion that will play audio 
     }
     sound = true;
-    bottomLeft.style.backgroundColor = "url('../assets/pictures/4overlayLight.jpg')"; //Light overlay background photo 
+    bottomLeft.style.backgroundImage = "url('../assets/pictures/4overlayLight.jpg')"; //Light overlay background photo 
   }
   
   function fourthFunction(){
@@ -132,7 +134,7 @@ function clearColor() {
       audio.play(); //Funtion that will play audio 
     }
     sound = true;
-    bottomRight.style.backgroundColor = "url('../assets/pictures/5overlayLight.jpg')"; //Light overlay background photo 
+    bottomRight.style.backgroundImage = "url('../assets/pictures/5overlayLight.jpg')"; //Light overlay background photo 
   }
  
   
