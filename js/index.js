@@ -92,15 +92,15 @@ function play(){
     }, 150);
   }
 }
-  function firstFunction(){
+ function firstFunction(){
     if (noise){
       var audio = document.getElementById("sound1"); //Selects first mp3 file chosen for a button
       audio.play(); //Funtion that will play audio 
     }
     noise = true;
+  }
+ 
   
- 
- 
  
  
  
