@@ -137,6 +137,20 @@ function clearColor() {
     bottomRight.style.backgroundImage = "url('../assets/pictures/5overlayLight-opt.jpg')"; //Light overlay background photo 
   }
  
+ //Functions that allow user to click all four buttons :
+ 
+ topLeft.addEventListener('click', (event) => {
+   if (on) {
+   userOrder.push(1); //Array of user input(clicks)
+   //check ();
+   firstFunction();
+   if (winner == false) {
+     setTimeout(() =>{
+       clearColor();
+     }, 350);
+   }
+   }
+ });
   
  
  
