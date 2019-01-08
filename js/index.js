@@ -142,7 +142,7 @@ function clearColor() {
  topLeft.addEventListener('click', (event) => {
    if (on) {
    userOrder.push(1); //Array of user input(clicks)
-   //check ();
+   correctOrder();
    firstFunction();
    if (winner == false) {
      setTimeout(() =>{
@@ -151,7 +151,55 @@ function clearColor() {
    }
    }
  });
+ 
+  topRight.addEventListener('click', (event) => {
+   if (on) {
+   userOrder.push(2); //Array of user input(clicks)
+   correctOrder();
+   secondFunction();
+   if (winner == false) {
+     setTimeout(() =>{
+       clearColor();
+     }, 350);
+   }
+   }
+ });
   
+   bottomLeft.addEventListener('click', (event) => {
+   if (on) {
+   userOrder.push(3); //Array of user input(clicks)
+   correctOrder();
+   thirdFunction();
+   if (winner == false) {
+     setTimeout(() =>{
+       clearColor();
+     }, 350);
+   }
+   }
+ });
+ 
+  bottomRight.addEventListener('click', (event) => {
+   if (on) {
+   userOrder.push(4); //Array of user input(clicks)
+   correctOrder();
+   fourthFunction();
+   if (winner == false) {
+     setTimeout(() =>{
+       clearColor();
+     }, 350);
+   }
+   }
+ });
+ 
+ //Function that checks correct order of input
+ 
+ function correctOrder () {
+   if (userOrder[userOrder.length - 1] !== order[userOrder.length -1]) good = false;
+  
+   
+   
+   
+ }
  
  
  
