@@ -65,7 +65,7 @@ function play(){
     order.push(Math.floor(Math.random() * 4 ) + 1);
 }
   gameTurn = true; //Game will start the sequence and the user will have to repeat it 
-  sequence = setInterval(computerTurn , 2000); //This sequence sets the interval of flashing lights in game 
+  sequence = setInterval(computerTurn , 1200); //This sequence sets the interval of flashing lights in game 
 }
   function computerTurn() {
     on = false;   //When on is false user is prohibited from pressing a button 
@@ -96,10 +96,10 @@ function play(){
 }
 
 function clearColor() {
-  topLeft.style.backgroundImage = "url(../assets/pictures/2overlayDark.jpg')";
-  topRight.style.backgroundImage = "url('../assets/pictures/3overlayDark.jpg')";
-  bottomLeft.style.backgroundImage = "url('../assets/pictures/4overlayDark.jpg')";
-  bottomRight.style.backgroundImage = "url('../assets/pictures/5overlayDark.jpg')";
+  topLeft.style.backgroundImage = "url(../assets/pictures/2overlayDark-opt.jpg')";
+  topRight.style.backgroundImage = "url('../assets/pictures/3overlayDark-opt.jpg')";
+  bottomLeft.style.backgroundImage = "url('../assets/pictures/4overlayDark-opt.jpg')";
+  bottomRight.style.backgroundImage = "url('../assets/pictures/5overlayDark-opt.jpg')";
 }
  function firstFunction(){
     if (sound){
@@ -107,7 +107,7 @@ function clearColor() {
       audio.play(); //Funtion that will play audio 
     }
     sound = true;
-    topLeft.style.backgroundImage = "url('../assets/pictures/2overlayLight.jpg')"; //Light overlay background photo 
+    topLeft.style.backgroundImage = "url('../assets/pictures/2overlayLight-opt.jpg')"; //Light overlay background photo 
   }
   
   function secondFunction(){
@@ -116,7 +116,7 @@ function clearColor() {
       audio.play(); //Funtion that will play audio 
     }
     sound = true;
-    topRight.style.backgroundImage = "url('../assets/pictures/3overlayLight.jpg')"; //Light overlay background photo 
+    topRight.style.backgroundImage = "url('../assets/pictures/3overlayLight-opt.jpg')"; //Light overlay background photo 
   }
   
   function thirdFunction(){
@@ -125,7 +125,7 @@ function clearColor() {
       audio.play(); //Funtion that will play audio 
     }
     sound = true;
-    bottomLeft.style.backgroundImage = "url('../assets/pictures/4overlayLight.jpg')"; //Light overlay background photo 
+    bottomLeft.style.backgroundImage = "url('../assets/pictures/4overlayLight-opt.jpg')"; //Light overlay background photo 
   }
   
   function fourthFunction(){
@@ -134,7 +134,7 @@ function clearColor() {
       audio.play(); //Funtion that will play audio 
     }
     sound = true;
-    bottomRight.style.backgroundImage = "url('../assets/pictures/5overlayLight.jpg')"; //Light overlay background photo 
+    bottomRight.style.backgroundImage = "url('../assets/pictures/5overlayLight-opt.jpg')"; //Light overlay background photo 
   }
  
   

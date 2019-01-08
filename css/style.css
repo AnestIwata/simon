@@ -99,7 +99,7 @@
   border-radius: 15em 0 0 0;
   -moz-border-radius: 15em 0 0 0;
   -webkit-border-radius: 15em 0 0 0;
-  background: url("../assets/pictures/2overlayDark.jpg");
+  background: url("../assets/pictures/2overlayDark-opt.jpg");
   background-size: cover;
   top: 50%;
   left: 50%;
@@ -119,7 +119,7 @@
   border-radius: 0 15em 0 0;
   -moz-border-radius: 0 15em 0 0;
   -webkit-border-radius: 0 15em 0 0;
-  background: url("../assets/pictures/3overlayDark.jpg");
+  background: url("../assets/pictures/3overlayDark-opt.jpg");
   background-size: cover;
   top: 50%;
   left: 50%;
@@ -139,7 +139,7 @@
   border-radius: 0 0 0 15em;
   -moz-border-radius: 0 0 0 15em;
   -webkit-border-radius: 0 0 0 15em;
-  background: url("../assets/pictures/4overlayDark.jpg");
+  background: url("../assets/pictures/4overlayDark-opt.jpg");
   background-size: cover;
   top: 50%;
   left: 50%;
@@ -159,7 +159,7 @@
   border-radius: 0 0 15em 0;
   -moz-border-radius: 0 0 15em 0;
   -webkit-border-radius: 0 0 15em 0;
-  background: url("../assets/pictures/5overlayDark.jpg");
+  background: url("../assets/pictures/5overlayDark-opt.jpg");
   background-size: cover;
   top: 50%;
   left: 50%;
