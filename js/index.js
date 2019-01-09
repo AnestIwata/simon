@@ -96,10 +96,10 @@ function play(){
 }
 
 function clearColor() {
-  topLeft.style.backgroundImage = "url('../assets/pictures/2overlayDark-opt.jpg')";
-  topRight.style.backgroundImage = "url('../assets/pictures/3overlayDark-opt.jpg')";
-  bottomLeft.style.backgroundImage = "url('../assets/pictures/4overlayDark-opt.jpg')";
-  bottomRight.style.backgroundImage = "url('../assets/pictures/5overlayDark-opt.jpg')";
+  $('#topleft').css("background-image", "url(../assets/pictures/2overlayDark-opt.jpg)");
+  $('#topright').css("background-image", "url(../assets/pictures/3overlayDark-opt.jpg)");
+  $('#bottomleft').css("background-image", "url(../assets/pictures/4overlayDark-opt.jpg)");
+  $('#bottomright').css("background-image", "url(../assets/pictures/5overlayDark-opt.jpg)");
 }
 
  function firstFunction(){
@@ -108,7 +108,7 @@ function clearColor() {
       audio.play(); //Funtion that will play audio 
     }
     sound = true;
-    topLeft.style.backgroundImage = "url('../assets/pictures/2overlayLight-opt.jpg')"; //Light overlay background photo 
+    $('#topleft').css("background-image", "url(../assets/pictures/2overlayLight-opt.jpg)"); //Light overlay background photo 
   }
   
   function secondFunction(){
@@ -117,7 +117,7 @@ function clearColor() {
       audio.play(); //Funtion that will play audio 
     }
     sound = true;
-    topRight.style.backgroundImage = "url('../assets/pictures/3overlayLight-opt.jpg')"; //Light overlay background photo 
+    $('#topright').css("background-image", "url(../assets/pictures/3overlayLight-opt.jpg)"); //Light overlay background photo 
   }
   
   function thirdFunction(){
@@ -126,7 +126,7 @@ function clearColor() {
       audio.play(); //Funtion that will play audio 
     }
     sound = true;
-    bottomLeft.style.backgroundImage = "url('../assets/pictures/4overlayLight-opt.jpg')"; //Light overlay background photo 
+    $('#bottomleft').css("background-image", "url(../assets/pictures/4overlayLight-opt.jpg)"); //Light overlay background photo 
   }
   
   function fourthFunction(){
@@ -135,7 +135,7 @@ function clearColor() {
       audio.play(); //Funtion that will play audio 
     }
     sound = true;
-    bottomRight.style.backgroundImage = "url('../assets/pictures/5overlayLight-opt.jpg')"; //Light overlay background photo 
+    $('#bottomright').css("background-image", "url(../assets/pictures/5overlayLight-opt.jpg)"); //Light overlay background photo 
   }
  
  //Functions that allow user to click all four buttons :
@@ -202,7 +202,7 @@ function clearColor() {
    gameWinner();
    }
    
-   if (good == false) { //When user c=scores incorretctly
+   if (good == false) { //When user scores incorretctly
      flashButtons();   //This will flash the buttons
      countTurn.innerHTML ="Err"; //Err message will display on incorrect score
      setTimeout(() => {
@@ -237,10 +237,10 @@ function clearColor() {
  //Setting up flashButtons function
  
   function flashButtons () {
-  topLeft.style.backgroundImage = "url(../assets/pictures/2overlayLight-opt.jpg')";
-  topRight.style.backgroundImage = "url('../assets/pictures/3overlayLight-opt.jpg')";
-  bottomLeft.style.backgroundImage = "url('../assets/pictures/4overlayLight-opt.jpg')";
-  bottomRight.style.backgroundImage = "url('../assets/pictures/5overlayLight-opt.jpg')";
+    $('#topleft').css("background-image", "url(../assets/pictures/2overlayLight-opt.jpg)");
+    $('#topright').css("background-image", "url(../assets/pictures/3overlayLight-opt.jpg)");
+    $('#bottomleft').css("background-image", "url(../assets/pictures/4overlayLight-opt.jpg)");
+    $('#bottomright').css("background-image", "url(../assets/pictures/5overlayLight-opt.jpg)");
   }
 
 
