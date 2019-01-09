@@ -3,9 +3,9 @@ let order = [];     //Order of flashing lights
 let userOrder =[];  //Order of user input
 let flash;  //Number of flashes appealing in the game
 let turn;   //Number of turns
-let good    //Checks if player have pushed correct buttons
-let gameTurn //Checks weather it's users turn or game's turn 
-let sequence //Checks wheather sequence input was correct
+let good ;   //Checks if player have pushed correct buttons
+let gameTurn; //Checks weather it's users turn or game's turn 
+let sequence; //Checks wheather sequence input was correct
 let strict = false; //Checks if strict button was applied
 let sound = true; //Manages sounds in the game 
 let on = false; //Checks if power button was pressed
@@ -44,14 +44,14 @@ strictButton.addEventListener('click', (event) => {
         } else {
         strict = false;
         }
-})
+});
 
 // Start button function 
 startButton.addEventListener('click', (event) => {
     if (on || winner) {
     play();
     }
-})
+});
 //First round of game
 function play(){
   winner = false; //user have not win the game yet
@@ -96,11 +96,12 @@ function play(){
 }
 
 function clearColor() {
-  topLeft.style.backgroundImage = "url(../assets/pictures/2overlayDark-opt.jpg')";
+  topLeft.style.backgroundImage = "url('../assets/pictures/2overlayDark-opt.jpg')";
   topRight.style.backgroundImage = "url('../assets/pictures/3overlayDark-opt.jpg')";
   bottomLeft.style.backgroundImage = "url('../assets/pictures/4overlayDark-opt.jpg')";
   bottomRight.style.backgroundImage = "url('../assets/pictures/5overlayDark-opt.jpg')";
 }
+
  function firstFunction(){
     if (sound){
       var audio = document.getElementById("sound1"); //Selects first mp3 file chosen for a button
@@ -194,12 +195,64 @@ function clearColor() {
  //Function that checks correct order of input
  
  function correctOrder () {
-   if (userOrder[userOrder.length - 1] !== order[userOrder.length -1]) good = false;
-  
+   if (userOrder[userOrder.length - 1] !== order[userOrder.length -1]) 
+   good = false; //If users order is incorrect then good == false
    
+   if (userOrder.length == 20 && good == true) { //If user will score 20 rounds then he wins. 
+   gameWinner();
+   }
    
+   if (good == false) { //When user c=scores incorretctly
+     flashButtons();   //This will flash the buttons
+     countTurn.innerHTML ="Err"; //Err message will display on incorrect score
+     setTimeout(() => {
+      countTurn.innerHTML = turn; //Counter will set back 
+      clearColor(); //Flashed colors will be cleared 
+      
+      if (strict) { //When strict mode is turned on
+        play(); //Game will start all over
+      } 
+      else {  //When strict mode is not turned on user can repeat the last round
+        gameTurn = true;
+        flash = 0;
+        userOrder = [];
+        good = true;
+        sequence = setInterval(gameTurn, 700);
+      }
+    }, 800);
+    sound = false;
+   }
+   //If the user have not win the game then he gets another turn
    
+   if (turn == userOrder.length && good && !winner) {  
+     turn++;
+     userOrder = []; //clearing user order
+     gameTurn = true;
+     flash = 0; 
+     countTurn.innerHTML = turn;
+     sequence = setInterval(gameTurn, 1000);
+   }
  }
+ 
+ //Setting up flashButtons function
+ 
+  function flashButtons () {
+  topLeft.style.backgroundImage = "url(../assets/pictures/2overlayLight-opt.jpg')";
+  topRight.style.backgroundImage = "url('../assets/pictures/3overlayLight-opt.jpg')";
+  bottomLeft.style.backgroundImage = "url('../assets/pictures/4overlayLight-opt.jpg')";
+  bottomRight.style.backgroundImage = "url('../assets/pictures/5overlayLight-opt.jpg')";
+  }
+
+
+  function gameWinner () {
+  flashButtons();
+  countTurn.innerHTML = "WIN!";
+  on = false;
+  winner = true;
+  }
+
+  
+
  
  
  
