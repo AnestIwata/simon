@@ -6,7 +6,7 @@
  [Simon](https://anestiwata.github.io/simon/) -- **Right-Click** and
  select **Open in New Tab**.
   
- Alternatively you can clone toe repository to youre local machine.
+ Alternatively you can clone the repository to youre local machine.
  Instructions can be found [here](https://help.github.com/articles/importing-a-git-repository-using-the-command-line/).
 
 ### User experience:

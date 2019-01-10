@@ -99,17 +99,24 @@
   border-radius: 15em 0 0 0;
   -moz-border-radius: 15em 0 0 0;
   -webkit-border-radius: 15em 0 0 0;
-  background: url("../assets/pictures/2overlayDark-opt.jpg");
   background-size: cover;
   top: 50%;
   left: 50%;
   margin: -15em 0em 0em -15em;
   border-style: solid;
   border-width: 0.12em;
-  border-color: yellow;
+  border-color: rgb(9, 238, 47);
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+}
+
+.darkTopLeft {
+  background: url("../assets/pictures/2overlayDark-opt.jpg");
+}
+
+.litTopLeft {
+  background: url("../assets/pictures/2overlayLight-opt.jpg");
 }
 
 #topright {
@@ -119,7 +126,6 @@
   border-radius: 0 15em 0 0;
   -moz-border-radius: 0 15em 0 0;
   -webkit-border-radius: 0 15em 0 0;
-  background: url("../assets/pictures/3overlayDark-opt.jpg");
   background-size: cover;
   top: 50%;
   left: 50%;
@@ -132,6 +138,14 @@
   -webkit-box-sizing: border-box;
 }
 
+.darkTopRight {
+  background: url("../assets/pictures/3overlayDark-opt.jpg");
+}
+
+.litTopRight {
+  background: url("../assets/pictures/3overlayLight-opt.jpg");
+}
+
 #bottomleft {
   position: absolute;
   height: 15em;
@@ -139,7 +153,6 @@
   border-radius: 0 0 0 15em;
   -moz-border-radius: 0 0 0 15em;
   -webkit-border-radius: 0 0 0 15em;
-  background: url("../assets/pictures/4overlayDark-opt.jpg");
   background-size: cover;
   top: 50%;
   left: 50%;
@@ -152,6 +165,14 @@
   -webkit-box-sizing: border-box;
 }
 
+.darkBottomLeft {
+  background: url("../assets/pictures/4overlayDark-opt.jpg");
+}
+
+.litBottomLeft {
+  background: url("../assets/pictures/4overlayLight-opt.jpg");
+}
+
 #bottomright {
   position: absolute;
   height: 15em;
@@ -159,7 +180,6 @@
   border-radius: 0 0 15em 0;
   -moz-border-radius: 0 0 15em 0;
   -webkit-border-radius: 0 0 15em 0;
-  background: url("../assets/pictures/5overlayDark-opt.jpg");
   background-size: cover;
   top: 50%;
   left: 50%;
@@ -170,6 +190,15 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+
+}
+
+.darkBottomRight {
+  background-image: url("../assets/pictures/5overlayDark-opt.jpg");
+}
+
+.litBottomRight {
+  background-image: url("../assets/pictures/5overlayLight-opt.jpg");
 }
 
 #inner-circle {
