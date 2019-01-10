@@ -81,7 +81,7 @@ function play() {
     // order.push(4);
   }
   gameTurn = true; //Game will start the sequence and the user will have to repeat it 
-  sequence = setInterval(computerTurn, 600); //This sequence sets the interval of flashing lights in game 
+  sequence = setInterval(computerTurn, 1100); //This sequence sets the interval of flashing lights in game 
 }
 
 function computerTurn() {
@@ -108,7 +108,7 @@ function computerTurn() {
         fourthFunction();
       }
       flash++;
-    }, 300);
+    }, 700);
   }
 }
 
@@ -168,7 +168,7 @@ topleft.addEventListener('click', (event) => {
     if (winner == false) {
       setTimeout(() => {
         clearColor();
-      }, 350);
+      }, 750);
     }
   }
 });
@@ -181,7 +181,7 @@ topright.addEventListener('click', (event) => {
     if (winner == false) {
       setTimeout(() => {
         clearColor();
-      }, 350);
+      }, 750);
     }
   }
 });
@@ -194,7 +194,7 @@ bottomleft.addEventListener('click', (event) => {
     if (winner == false) {
       setTimeout(() => {
         clearColor();
-      }, 350);
+      }, 750);
     }
   }
 });
@@ -207,7 +207,7 @@ bottomright.addEventListener('click', (event) => {
     if (winner == false) {
       setTimeout(() => {
         clearColor();
-      }, 350);
+      }, 750);
     }
   }
 });
@@ -218,7 +218,7 @@ function correctOrder() {
   if (userOrder[userOrder.length - 1] !== order[userOrder.length - 1])
     good = false;
 
-  if (userOrder.length == 20 && good) {
+  if (userOrder.length == 2 && good) {
     winGame();
   }
 
@@ -235,9 +235,9 @@ function correctOrder() {
         flash = 0;
         userOrder = [];
         good = true;
-        sequence = setInterval(computerTurn, 800);
+        sequence = setInterval(computerTurn, 1400);
       }
-    }, 800);
+    }, 1400);
 
     sound = false;
   }
@@ -248,13 +248,13 @@ function correctOrder() {
     gameTurn = true;
     flash = 0;
     countTurn.innerHTML = turn;
-    sequence = setInterval(computerTurn, 800);
+    sequence = setInterval(computerTurn, 1300);
   }
 
 }
 //When user is will finish game
 function winGame() {
-  countTurn.innerHTML = "winner!";
+  countTurn.innerHTML = "WIN";
   on = false;
   winner = true;
 }
