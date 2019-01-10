@@ -105,7 +105,7 @@
   margin: -15em 0em 0em -15em;
   border-style: solid;
   border-width: 0.12em;
-  border-color: rgb(9, 238, 47);
+  border-color: #FFEB3B;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -216,4 +216,12 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+}
+
+#hidden_preload {
+  height: 1px;
+  left: -20000px;
+  position: absolute;
+  top: -20000px;
+  width: 1px;
 }

@@ -24,6 +24,13 @@ const strictButton = document.querySelector("#strict");
 const onButton = document.querySelector("#on");
 const startButton = document.querySelector("#start");
 
+function preloadImages(arrayOfImages) {
+  $(arrayOfImages).each(function () {
+    $('<img />').attr('src', this).appendTo('body').css('display', 'none');
+  });
+}
+
+
 //Added functionality of power button, when ON it will display three dashes in countTurn window.
 onButton.addEventListener('click', (event) => {
   if (onButton.checked == true) {
@@ -55,6 +62,12 @@ startButton.addEventListener('click', (event) => {
 
 //First round of game
 function play() {
+  preloadImages([
+    '../assets/pictures/2overlayLight-opt.jpg',
+    '../assets/pictures/3overlayLight-opt.jpg',
+    '../assets/pictures/4overlayLight-opt.jpg',
+    '../assets/pictures/5overlayLight-opt.jpg'
+  ]);
   winner = false; //user have not won the game yet
   order = [];
   good = true;
@@ -64,8 +77,8 @@ function play() {
   flash = 0;
   turn = 1;
   for (var i = 0; i < 20; i++) { //Creates an array of 20 numers from 1 to 4 
-    // order.push(Math.floor(Math.random() * 4 ) + 1);
-    order.push(4);
+    order.push(Math.floor(Math.random() * 4 ) + 1);
+    // order.push(4);
   }
   gameTurn = true; //Game will start the sequence and the user will have to repeat it 
   sequence = setInterval(computerTurn, 600); //This sequence sets the interval of flashing lights in game 
@@ -153,7 +166,7 @@ topleft.addEventListener('click', (event) => {
     correctOrder();
     firstFunction();
     if (winner == false) {
-      setTimeout(() =>{
+      setTimeout(() => {
         clearColor();
       }, 350);
     }
@@ -166,7 +179,7 @@ topright.addEventListener('click', (event) => {
     correctOrder();
     secondFunction();
     if (winner == false) {
-      setTimeout(() =>{
+      setTimeout(() => {
         clearColor();
       }, 350);
     }
@@ -179,7 +192,7 @@ bottomleft.addEventListener('click', (event) => {
     correctOrder();
     thirdFunction();
     if (winner == false) {
-      setTimeout(() =>{
+      setTimeout(() => {
         clearColor();
       }, 350);
     }
@@ -192,7 +205,7 @@ bottomright.addEventListener('click', (event) => {
     correctOrder();
     fourthFunction();
     if (winner == false) {
-      setTimeout(() =>{
+      setTimeout(() => {
         clearColor();
       }, 350);
     }
@@ -239,9 +252,9 @@ function correctOrder() {
   }
 
 }
-
+//When user is will finish game
 function winGame() {
-  countTurn.innerHTML = ":-)!";
+  countTurn.innerHTML = "winner!";
   on = false;
   winner = true;
 }
