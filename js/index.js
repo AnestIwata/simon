@@ -86,13 +86,15 @@ function play() {
 
 function computerTurn() {
   on = false; //When on is false user is prohibited from pressing a button 
-  if (flash == turn) { //
+  if (flash == turn) {
+   $("#on").prop("disabled", true); //Clearing up error with user able to turn off game during sequence
     clearInterval(sequence); //Clears sequence when games turn is over
     gameTurn = false;
     clearColor(); //Clears lit up buttons
     on = true; //User can start repeating the sequence 
   }
   if (gameTurn) { //When it's still games turn 
+   $("#on").prop("disabled", true);
     clearColor();
     setTimeout(() => {
       if (order[flash] == 1) { //Function responsible for flashing top left button 
@@ -130,7 +132,7 @@ function firstFunction() {
 
 function secondFunction() {
   if (sound) {
-    var audio = document.getElementById("sound2"); //Selects first mp3 file chosen for a button
+    var audio = document.getElementById("sound2"); //Selects second mp3 file chosen for a button
     audio.play(); //Funtion that will play audio 
   }
   sound = true;
@@ -140,7 +142,7 @@ function secondFunction() {
 
 function thirdFunction() {
   if (sound) {
-    var audio = document.getElementById("sound3"); //Selects first mp3 file chosen for a button
+    var audio = document.getElementById("sound3"); //Selects third mp3 file chosen for a button
     audio.play(); //Funtion that will play audio 
   }
   sound = true;
@@ -150,7 +152,7 @@ function thirdFunction() {
 
 function fourthFunction() {
   if (sound) {
-    var audio = document.getElementById("sound4"); //Selects first mp3 file chosen for a button
+    var audio = document.getElementById("sound4"); //Selects fourth mp3 file chosen for a button
     audio.play(); //Funtion that will play audio 
   };
   sound = true;
@@ -252,7 +254,7 @@ function correctOrder() {
   }
 
 }
-//When user is will finish game
+//When user will finish game
 function winGame() {
   countTurn.innerHTML = "WIN";
   on = false;
