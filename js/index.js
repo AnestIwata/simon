@@ -94,7 +94,7 @@ function computerTurn() {
     on = true; //User can start repeating the sequence 
   }
   if (gameTurn) { //When it's still games turn 
-   $("#on").prop("disabled", true);
+   $("#on").prop("disabled", false);
     clearColor();
     setTimeout(() => {
       if (order[flash] == 1) { //Function responsible for flashing top left button 
