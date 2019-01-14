@@ -23,7 +23,7 @@ const bottomRight = document.querySelector("#bottomright");
 const strictButton = document.querySelector("#strict");
 const onButton = document.querySelector("#on");
 const startButton = document.querySelector("#start");
-
+  
 function preloadImages(arrayOfImages) {
   $(arrayOfImages).each(function () {
     $('<img />').attr('src', this).appendTo('body').css('display', 'none');
@@ -218,7 +218,7 @@ function correctOrder() {
   if (userOrder[userOrder.length - 1] !== order[userOrder.length - 1])
     good = false;
 
-  if (userOrder.length == 2 && good) {
+  if (userOrder.length == 20 && good) {
     winGame();
   }
 
@@ -258,3 +258,5 @@ function winGame() {
   on = false;
   winner = true;
 }
+
+
