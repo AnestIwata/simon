@@ -87,14 +87,14 @@ function play() {
 function computerTurn() {
   on = false; //When on is false user is prohibited from pressing a button 
   if (flash == turn) {
-   $("#on").prop("disabled", true); //Clearing up error with user able to turn off game during sequence
+   $("#on").prop("disabled", false); //Clearing up error with user able to turn off game during sequence
     clearInterval(sequence); //Clears sequence when games turn is over
     gameTurn = false;
     clearColor(); //Clears lit up buttons
     on = true; //User can start repeating the sequence 
   }
   if (gameTurn) { //When it's still games turn 
-   $("#on").prop("disabled", false);
+   $("#on").prop("disabled", true);
     clearColor();
     setTimeout(() => {
       if (order[flash] == 1) { //Function responsible for flashing top left button 
