@@ -1,0 +1,22 @@
+{
+  "name": "simongame",
+  "version": "1.0.0",
+  "description": "**This is a simon memory game created for milestone two project**",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnestIwata/simon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnestIwata/simon/issues"
+  },
+  "homepage": "https://github.com/AnestIwata/simon#readme",
+  "devDependencies": {
+    "jasmine": "^3.3.1"
+  }
+}
