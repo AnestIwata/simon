@@ -1,8 +1,12 @@
 /*--Testing power button to be checked--*/
 
-describe('Power button to be checked', function() {
-expect($('<input type="checkbox" checked="checked"/>')).toBeChecked()
-});
+
+var onButton = document.querySelector('input[name = "onButton"]:checked');
+if('onButton' != null){  //Test if something was checked
+alert("onButton".value); //Alert the value of the checked.
+} else {
+alert('Nothing checked'); //Alert, nothing was checked.
+}
 
 /*--Testing power button to display dashes when on --*/
 
@@ -15,11 +19,20 @@ describe("powering game", function(){
             
         });
 
-/*--Testing start button, should I use jasmine jQuery for it ???--*/
+/*--Testing winning game function--------*/
 
-var spyEvent = spyOnEvent('#startButton', 'click')
-$('#onButton').click()
-expect('click').toHaveBeenTriggeredOn('#function play')
-expect(spyEvent).toHaveBeenTriggered();
+describe("Winning game function", (){
+    beforeEach(function() {
+        order = new correctOrder();
+    });
+    describe("Passing Win value ", function() {
+       expect("winGame").toBeDefined(); 
+    });
+    it("should return ", function() {
+            expect(innerHTML).toBe("WIN");
+        });
+});
 
-xpect($('<div style="display: none; margin: 10px;"></div>')).toHaveCss({display: "none", margin: "10px"})
+/*-------------------------*/
+
+
