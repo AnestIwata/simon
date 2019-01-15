@@ -43,5 +43,11 @@ describe("play function test ",function(){
     expect('good').toBe(true);
   });
 });
-
-
+//example from course 
+describe("Calculator", function() {
+    describe("Addition function", function() {
+        it("should return 42", function() {
+            expect(addition(20, 22)).toBe(42);
+        });
+    });
+});

@@ -16,6 +16,9 @@ onButton.addEventListener('click', (event) => {
 //winning game function
 function winGame() {
   countTurn.innerHTML = "WIN";
-  on = false;
-  winner = true;
+ 
+}
+//exapmple from course
+function addition() {
+    return 42;
 }
