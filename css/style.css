@@ -1,3 +1,4 @@
+  /*--jumbotron style--*/
   .jumbotron{
      background: url("../assets/pictures/1.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -6,6 +7,12 @@
     background-size: cover;
     border-radius:1vw;
     margin: auto;
+  }
+  
+  a {
+    color: lightgray;
+    text-decoration: none;
+    font-size: 1.7vw;
   }
   
   /*--Styled text--*/
@@ -23,6 +30,21 @@
     font-size: 1.5vw;
     color:yellow;
     text-align: center;
+  }
+  
+  /*--game info text style--*/
+  .jumbotron h3 {
+    font-family: Rubik;
+    font-size: 2vw;
+    color:yellow;
+    text-align: center;
+    margin-right: 0.4vw;
+    margin-left: 0.4vw;
+  }
+  @media (min-width: 300px) and (max-width: 770px){
+    .jumbotron h3 {
+    font-size: 4vw;
+    }
   }
     
   
@@ -53,14 +75,14 @@
     margin-top: 5.7vw;
     }
     
-    #on {
-      margin-left: -1vw;
+  #on {
+    margin-left: -1vw;
   	}
   	
   	#strict  {
-      margin-left: 2vw;
-      width: 2vw;
-      height:2vw;
+    margin-left: 2vw;
+    width: 2vw;
+    height:2vw;
   	}
   
   .counter {
@@ -265,6 +287,8 @@
     height: 50vw;
     width: 50vw;
   }
+  
+  /*--pads styles--*/
   #topleft {
     height: 25vw;
     width: 25vw;
@@ -301,7 +325,11 @@
     margin: 0vw 0vw -25vw 0vw;
     border-width: 0.2vw;
   }
-  	#inner-circle {
+  
+  /*--end of pads styles--*/
+  
+  /*--inner circle style--*/
+	#inner-circle {
     height: 25vw;
     width: 25vw;
     border-width: 0.12vw;
@@ -310,15 +338,18 @@
     left: 50%;
     margin: -12.5vw 0vw 0vw -12.5vw;
   	}
-    #title{
+   #title{
       margin-left: 6.8vw;
       font-size: 2.5vw;
     }
     
+    /*--switches style--*/
     #switches {
       margin-left: 7vw;
       margin-top: 8vw;
     }
+    
+    /*--counter style--*/
     .counter {
     font-size: 1.8vw;
     margin-left: 9vw;
@@ -339,6 +370,7 @@
     margin-top: 13vw;
   }
 	
+	/*--on button style--*/
 	#on{
     margin-right: 0px;
     margin-bottom: 0px;
@@ -347,6 +379,7 @@
     height:2vw;
 	}
 	
+	/*--strict button style--*/
 	#strict{
     margin-right: 0px;
     margin-bottom: 0px;
@@ -355,6 +388,7 @@
     height:2vw;
   	}
   	
+  	/*--Power button style--*/
   	.button {
     border-width: 0.2vw;
     width: 8vw;

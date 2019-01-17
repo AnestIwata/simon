@@ -11,4 +11,4 @@ function playFunction(soundid, targetid, classname) {
   sound = true;
   $('#' + targetid).addClass(classname);
 }
-playFunction('sound1', 'topleft', 'litTopLeft');
+playFunction('sound1', 'topleft', 'litTopLeft');te
