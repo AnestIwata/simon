@@ -11,8 +11,6 @@ var sound = true; //Manages sounds in the game
 var on = false; //Checks if power button was pressed
 var winner; //Checks if user have won the game 
 
-
-
 //Referencing  all html elements in JavaScript
 
 const countTurn = document.querySelector("#turn");

@@ -1,4 +1,4 @@
-  /*--jumbotron style--*/
+/*--jumbotron style--*/
   .jumbotron{
      background: url("../assets/pictures/1.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -16,7 +16,7 @@
   }
   
   /*--Styled text--*/
-   .jumbotron h1 {
+  .jumbotron h1 {
     font-family: Rubik;
     font-style: italic;
     font-size: 3vw;
@@ -79,7 +79,7 @@
     margin-left: -1vw;
   	}
   	
-  	#strict  {
+  #strict  {
     margin-left: 2vw;
     width: 2vw;
     height:2vw;
