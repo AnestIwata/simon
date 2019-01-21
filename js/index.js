@@ -119,10 +119,11 @@ function clearColor() {
     $('#bottomright').removeClass('litBottomRight');
 }
 
+
 function firstFunction() {
     if (sound) {
         var audio = document.getElementById("sound1"); //Selects first mp3 file chosen for a button
-        audio.play(); //Funtion that will play audio 
+        audio.play();//Funtion that will play audio 
     }
     sound = true;
     $('#topleft').addClass('litTopLeft');

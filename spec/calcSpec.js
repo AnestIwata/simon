@@ -1,5 +1,5 @@
 /*--Testing power button to be checked--*/
-var addition = require("../scripts/calc");
+var addition = require("scripts/calc.js");
 
 // var onButton = document.querySelector('input[name = "onButton"]:checked');
 //     if("onButton" != null){
