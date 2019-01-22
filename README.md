@@ -28,11 +28,11 @@
  
   ### Technologies used:
   
-  1.HTML (https://en.wikipedia.org/wiki/HTML5)
-  2.CSS (https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
-  3.Bootstrap (https://getbootstrap.com/) The most easy and fun to style beautiful websites.
-  4.Javascript (https://www.javascript.com/) Best begginer language to learn. 
-  5.JQuery (https://jquery.com/)I have chosen this library for it's versatility across the browsers.
+  1. HTML (https://en.wikipedia.org/wiki/HTML5)
+  2. CSS (https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+  3. Bootstrap (https://getbootstrap.com/) The most easy and fun to style beautiful websites.
+  4. Javascript (https://www.javascript.com/) Best begginer language to learn. 
+  5. JQuery (https://jquery.com/)I have chosen this library for it's versatility across the browsers.
  
   ### Logic:
  
@@ -49,6 +49,7 @@
  
   On the beginning we need to declare some variables that will be fundamental for our program:
  
+ ```javascript
   var order = []; *Order of flashing lights*
   var userOrder = [];  *Order of user input*
   var flash;  *Number of flashes appealing in the game*
@@ -60,6 +61,7 @@
   var sound = true; *Manages sounds in the game*
   var on = false; *Checks if power button was pressed*
   var winner;  *Checks if user have won the game* 
+ ```
   
   We are targeting start button with :
  
