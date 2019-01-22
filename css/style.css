@@ -10,7 +10,7 @@
   }
   
   a {
-    color: lightgray;
+    color: white;
     text-decoration: none;
     font-size: 1.7vw;
   }
@@ -35,19 +35,29 @@
   /*--game info text style--*/
   .jumbotron h3 {
     font-family: Rubik;
-    font-size: 2vw;
-    color:yellow;
+    font-size: 1.6vw;
+    color: white;
     text-align: center;
     margin-right: 0.4vw;
     margin-left: 0.4vw;
   }
-  @media (min-width: 300px) and (max-width: 770px){
+  
+  @media (min-width: 200px) and (max-width: 400px){
     .jumbotron h3 {
-    font-size: 4vw;
+    font-size: 3.8vw;
     }
   }
-    
+  @media (min-width: 400px) and (max-width: 500px){
+    .jumbotron h3 {
+    font-size: 3.6vw;
+    }
+  }
   
+  @media (min-width: 500px) and (max-width: 600px){
+    .jumbotron h3 {
+    font-size: 2.7vw;
+    }
+  }
   
   .toggle {
     margin-left: 2vw;
@@ -58,7 +68,7 @@
   
   .button {
     border-radius: 50%;
-    background-color: #8268b2;
+    background-color: lightgray;
     border-style: solid;
     border-color: black;
     border-width: 0.1vw;
@@ -284,45 +294,45 @@
     margin-top: 4.5vw;
   	}
   	#outer-circle {
-    height: 50vw;
-    width: 50vw;
+    height: 80vw;
+    width: 80vw;
   }
   
   /*--pads styles--*/
   #topleft {
-    height: 25vw;
-    width: 25vw;
-    border-radius: 25vw 0 0 0;
-    -moz-border-radius: 25vw 0 0 0;
-    -webkit-border-radius: 25vw 0 0 0;
-    margin: -25vw 0vw 0vw -25vw;
+    height: 40vw;
+    width: 40vw;
+    border-radius: 40vw 0 0 0;
+    -moz-border-radius: 40vw 0 0 0;
+    -webkit-border-radius: 40vw 0 0 0;
+    margin: -40vw 0vw 0vw -40vw;
     border-width: 0.2vw;
   }
   #topright {
-    height: 25vw;
-    width: 25vw;
-    border-radius: 0 25vw 0 0;
-    -moz-border-radius: 0 25vw 0 0;
-    -webkit-border-radius: 0 25vw 0 0;
-    margin: -25vw 0vw 0vw 0vw;
+    height: 40vw;
+    width: 40vw;
+    border-radius: 0 40vw 0 0;
+    -moz-border-radius: 0 40vw 0 0;
+    -webkit-border-radius: 0 40vw 0 0;
+    margin: -40vw 0vw 0vw 0vw;
     border-width: 0.2vw;
   }
   #bottomleft {
-    height: 25vw;
-    width: 25vw;
-    border-radius: 0 0 0 25vw;
-    -moz-border-radius: 0 0 0 25vw;
-    -webkit-border-radius: 0 0 0 25vw;
-    margin: 0vw -25vw 0vw -25vw;
+    height: 40vw;
+    width: 40vw;
+    border-radius: 0 0 0 40vw;
+    -moz-border-radius: 0 0 0 40vw;
+    -webkit-border-radius: 0 0 0 40vw;
+    margin: 0vw -40vw 0vw -40vw;
     border-width: 0.2vw;
   }
   #bottomright {
-    height: 25vw;
-    width: 25vw;
-    border-radius: 0 0 25vw 0;
-    -moz-border-radius: 0 0 25vw 0;
-    -webkit-border-radius: 0 0 25vw 0;
-    margin: 0vw 0vw -25vw 0vw;
+    height: 40vw;
+    width: 40vw;
+    border-radius: 0 0 40vw 0;
+    -moz-border-radius: 0 0 40vw 0;
+    -webkit-border-radius: 0 0 40vw 0;
+    margin: 0vw 0vw -40vw 0vw;
     border-width: 0.2vw;
   }
   
@@ -330,53 +340,57 @@
   
   /*--inner circle style--*/
 	#inner-circle {
-    height: 25vw;
-    width: 25vw;
+    height: 40vw;
+    width: 40vw;
     border-width: 0.12vw;
     border-color: yellow;
     top: 50%;
     left: 50%;
-    margin: -12.5vw 0vw 0vw -12.5vw;
+    margin: -19.5vw 0vw 0vw -19.5vw;
   	}
    #title{
-      margin-left: 6.8vw;
-      font-size: 2.5vw;
+    margin-top: 6vw;
+    margin-left: 7vw;
+    font-size: 5vw;
     }
     
     /*--switches style--*/
     #switches {
-      margin-left: 7vw;
-      margin-top: 8vw;
+      margin-left: 5vw;
+      margin-top: 15vw;
     }
     
     /*--counter style--*/
     .counter {
-    font-size: 1.8vw;
-    margin-left: 9vw;
-    margin-top: 19.7vw;
+    font-size: 3.2vw;
+    margin-left: 12vw;
+    margin-top: 33vw;
   }
+    .poweron span:last-child {
+    padding-left: 12vw;
+}
     
     #turn {
-    font-size: 1.9vw;
-    height: 4vw;
-    width: 6.3vw;
-    margin-left: 9.5vw;
-    margin-top: 14.5vw;
+    font-size: 4vw;
+    height: 7vw;
+    width: 13vw;
+    margin-left: 13.5vw;
+    margin-top: 26vw;
     border-color: #673AB7;
     }
     .poweron {
     font-size: 1.9vw;
-    margin-left: 3vw;
-    margin-top: 13vw;
+    margin-left: 6.5vw;
+    margin-top: 23vw;
   }
 	
 	/*--on button style--*/
 	#on{
     margin-right: 0px;
     margin-bottom: 0px;
-    margin-left: -2vw;
-    width: 2vw;
-    height:2vw;
+    margin-left: 2vw;
+    width: 3vw;
+    height:3vw;
 	}
 	
 	/*--strict button style--*/
@@ -384,16 +398,71 @@
     margin-right: 0px;
     margin-bottom: 0px;
     margin-left: 2vw;
-    width: 2vw;
-    height:2vw;
+    width: 3vw;
+    height:3vw;
   	}
+  
+  /*-- Text --*/	
+  .jumbotron h1 {
+    font-family: Rubik;
+    font-style: italic;
+    font-size: 6vw;
+    color: yellow;
+    text-align: center;
+  }
+  
+  .jumbotron p {
+    font-family: Rubik;
+    font-style: italic;
+    font-size: 3vw;
+    color: yellow;
+    text-align: center;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 3vw;
+  }
   	
   	/*--Power button style--*/
   	.button {
-    border-width: 0.2vw;
-    width: 8vw;
-    height: 4vw;
+    border-width: 0.1vw;
+    width: 12vw;
+    height: 6vw;
     font-size: 1.9vw;
-    margin-left: 0.7vw;
+    margin-left: 3vw;
   }
   }
+    
+  /*--Closing button style  on gameinfo page--*/
+  
+  #closebutton {
+    font-family: Rubik;
+    background-color:yellow;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    margin-top:5%;
+    margin-bottom:0%;
+    border-radius:0.5vw;
+  }
+  
+    @media screen and (min-width: 300px){
+    .jumbotron {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    height: 100vh;
+    }
+    }
+  
+  /*--Game info container overlay--*/
+  .jumbotron .container {
+    max-width: 100%;
+    background-color: blueviolet;
+    opacity: 0.5;
+    z-index: 2;
+}
+ 
+  
+  

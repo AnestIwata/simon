@@ -22,7 +22,7 @@ var addition = require("scripts/calc.js");
 //     expect('good').toBe(true);
 //   });
 // });
-//example from course 
+
 
 
 /*refactoring play function
@@ -35,7 +35,6 @@ function playFunction(soundid, targetid, classname) {
   $('#' + targetid).addClass(classname);
 }
 
-playFunction('sound1', 'topleft', 'litTopLeft');
 
 So we get :
 
