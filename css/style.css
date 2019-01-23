@@ -1,12 +1,15 @@
 /*--jumbotron style--*/
   .jumbotron{
-     background: url("../assets/pictures/1.jpg") no-repeat center center fixed; 
+     background: url("../assets/pictures/1over.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     border-radius:1vw;
     margin: auto;
+  }
+  #second jumbotron{
+   background: url("../assets/pictures/1over.jpg") no-repeat center center fixed; 
   }
   
   a {
@@ -40,6 +43,7 @@
     text-align: center;
     margin-right: 0.4vw;
     margin-left: 0.4vw;
+   
   }
   
   @media (min-width: 200px) and (max-width: 400px){
@@ -49,7 +53,7 @@
   }
   @media (min-width: 400px) and (max-width: 500px){
     .jumbotron h3 {
-    font-size: 3.6vw;
+    font-size: 3.8vw;
     }
   }
   
@@ -456,13 +460,6 @@
     }
     }
   
-  /*--Game info container overlay--*/
-  .jumbotron .container {
-    max-width: 100%;
-    background-color: blueviolet;
-    opacity: 0.5;
-    z-index: 2;
-}
  
   
   
