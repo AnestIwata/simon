@@ -9,3 +9,11 @@ describe("Calculator", function() {
         });
     });
 });
+
+describe("Testing an array of numbers", function() {
+    describe("generateRandomNumbers function", function() {
+        it ("should return generateRandomNumbers", function(){
+            expect("generateRandomNumbers").toBeDefined();
+        });
+    });
+});

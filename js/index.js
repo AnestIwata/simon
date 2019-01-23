@@ -66,8 +66,15 @@ function play() {
         '../assets/pictures/4overlayLight-opt.jpg',
         '../assets/pictures/5overlayLight-opt.jpg'
     ]);
+function generateRandomNumbers(length){
+    sequence = []
+    for (var i = 0; i < length; i++) { //Creates an array of numbers from 1 to 4 depending on length
+        sequence.push(Math.floor(Math.random() * 4) + 1);
+    }
+    return sequence;
+    }
     winner = false; //user have not won the game yet
-    order = [];
+    order = generateRandomNumbers(20);
     good = true;
     sequence = 0;
     countTurn.innerHTML = 1;
