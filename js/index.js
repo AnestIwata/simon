@@ -1,4 +1,5 @@
 //Creating necessary variabales for the program functionality
+const utils = require("..scripts/calc.js");
 var order = []; //Order of flashing lights
 var userOrder = []; //Order of user input
 var flash; //Number of flashes appealing in the game
@@ -21,6 +22,7 @@ const bottomRight = document.querySelector("#bottomright");
 const strictButton = document.querySelector("#strict");
 const onButton = document.querySelector("#on");
 const startButton = document.querySelector("#start");
+
 
 function preloadImages(arrayOfImages) {
     $(arrayOfImages).each(function() {
@@ -49,7 +51,7 @@ strictButton.addEventListener('click', (event) => {
     } else {
         strict = false;
     }
-})
+});
 
 // Start button function 
 startButton.addEventListener('click', (event) => {
@@ -74,14 +76,13 @@ function play() {
         '../assets/pictures/5overlayLight-opt.jpg'
     ]);
     winner = false; //user have not won the game yet
-    
     good = true;
     sequence = 0;
     countTurn.innerHTML = 1;
     userOrder = [];
     flash = 0;
     turn = 1;
-    order = generateRandomNumbers(20);
+    order = utils.generateRandomNumbers(20);
     
     gameTurn = true; //Game will start the sequence and the user will have to repeat it 
     sequence = setInterval(computerTurn, 1100); //This sequence sets the interval of flashing lights in game 

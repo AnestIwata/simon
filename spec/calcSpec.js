@@ -1,12 +1,7 @@
-/*--Testing power button to be checked--*/
-var addition = require("../scripts/calc.js");
+const utils = require("..scripts/calc.js");
 
-
-
-describe("Testing an array of numbers", function() {
-    describe("generateRandomNumbers function", function() {
-        it ("should return generateRandomNumbers", function(){
-            expect("generateRandomNumbers").toBeDefined();
-        });
-    });
+describe("Testing a random array of numbers",function(){
+  it ("generateRandomNumbers should return a set of a random numbers", function(){
+      random1 = utils.generateRandomNumbers(5);
+  })
 });
