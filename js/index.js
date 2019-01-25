@@ -57,6 +57,13 @@ startButton.addEventListener('click', (event) => {
         play();
     }
 });
+function generateRandomNumbers(length){
+  sequence = [];
+  for (var i = 0; i < length; i++) { //Creates an array of numbers from 1 to 4 depending on length
+        sequence.push(Math.floor(Math.random() * 4) + 1);
+    }
+  return sequence;
+}
 
 //First round of game
 function play() {
@@ -66,25 +73,16 @@ function play() {
         '../assets/pictures/4overlayLight-opt.jpg',
         '../assets/pictures/5overlayLight-opt.jpg'
     ]);
-function generateRandomNumbers(length){
-    sequence = []
-    for (var i = 0; i < length; i++) { //Creates an array of numbers from 1 to 4 depending on length
-        sequence.push(Math.floor(Math.random() * 4) + 1);
-    }
-    return sequence;
-    }
     winner = false; //user have not won the game yet
-    order = generateRandomNumbers(20);
+    
     good = true;
     sequence = 0;
     countTurn.innerHTML = 1;
     userOrder = [];
     flash = 0;
     turn = 1;
-    for (var i = 0; i < 20; i++) { //Creates an array of 20 numers from 1 to 4 
-        order.push(Math.floor(Math.random() * 4) + 1);
-        // order.push(4);
-    }
+    order = generateRandomNumbers(20);
+    
     gameTurn = true; //Game will start the sequence and the user will have to repeat it 
     sequence = setInterval(computerTurn, 1100); //This sequence sets the interval of flashing lights in game 
 }
@@ -126,11 +124,10 @@ function clearColor() {
     $('#bottomright').removeClass('litBottomRight');
 }
 
-
 function firstFunction() {
     if (sound) {
         var audio = document.getElementById("sound1"); //Selects first mp3 file chosen for a button
-        audio.play();//Funtion that will play audio 
+        audio.play(); //Funtion that will play audio 
     }
     sound = true;
     $('#topleft').addClass('litTopLeft');
@@ -176,7 +173,7 @@ topleft.addEventListener('click', (event) => {
         if (winner == false) {
             setTimeout(() => {
                 clearColor();
-            }, 750);
+            }, 950);
         }
     }
 });
@@ -189,7 +186,7 @@ topright.addEventListener('click', (event) => {
         if (winner == false) {
             setTimeout(() => {
                 clearColor();
-            }, 750);
+            }, 950);
         }
     }
 });
@@ -202,7 +199,7 @@ bottomleft.addEventListener('click', (event) => {
         if (winner == false) {
             setTimeout(() => {
                 clearColor();
-            }, 750);
+            }, 950);
         }
     }
 });
@@ -215,7 +212,7 @@ bottomright.addEventListener('click', (event) => {
         if (winner == false) {
             setTimeout(() => {
                 clearColor();
-            }, 750);
+            }, 950);
         }
     }
 });
@@ -243,9 +240,9 @@ function correctOrder() {
                 flash = 0;
                 userOrder = [];
                 good = true;
-                sequence = setInterval(computerTurn, 1400);
+                sequence = setInterval(computerTurn, 1900);
             }
-        }, 1400);
+        }, 1900);
         sound = false;
     }
 
@@ -255,7 +252,7 @@ function correctOrder() {
         gameTurn = true;
         flash = 0;
         countTurn.innerHTML = turn;
-        sequence = setInterval(computerTurn, 1300);
+        sequence = setInterval(computerTurn, 1800);
     }
 }
 
