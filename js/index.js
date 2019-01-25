@@ -126,7 +126,7 @@ function clearColor() {
 
 function firstFunction() {
     if (sound) {
-        var audio = document.getElementById("sound1"); //Selects first mp3 file chosen for a button
+        var audio = new Audio('../assets/sounds/Cabin.mp3'); //Selects first mp3 file chosen for a button
         audio.play(); //Funtion that will play audio 
     }
     sound = true;
@@ -135,7 +135,7 @@ function firstFunction() {
 
 function secondFunction() {
     if (sound) {
-        var audio = document.getElementById("sound2"); //Selects second mp3 file chosen for a button
+        var audio = new Audio('../assets/sounds/Clearedfortakeoff.mp3'); //Selects second mp3 file chosen for a button
         audio.play(); //Funtion that will play audio 
     }
     sound = true;
@@ -145,7 +145,7 @@ function secondFunction() {
 
 function thirdFunction() {
     if (sound) {
-        var audio = document.getElementById("sound3"); //Selects third mp3 file chosen for a button
+        var audio = new Audio('../assets/sounds/Mayday.mp3'); //Selects third mp3 file chosen for a button
         audio.play(); //Funtion that will play audio 
     }
     sound = true;
@@ -155,7 +155,7 @@ function thirdFunction() {
 
 function fourthFunction() {
     if (sound) {
-        var audio = document.getElementById("sound4"); //Selects fourth mp3 file chosen for a button
+        var audio = new Audio('../assets/sounds//Oldplane.mp3');//Selects fourth mp3 file chosen for a button
         audio.play(); //Funtion that will play audio 
     };
     sound = true;
