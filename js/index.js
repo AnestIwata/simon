@@ -155,7 +155,7 @@ function thirdFunction() {
 
 function fourthFunction() {
     if (sound) {
-        var audio = new Audio('../assets/sounds//Oldplane.mp3');//Selects fourth mp3 file chosen for a button
+        var audio = new Audio('../assets/sounds/Oldplane.mp3');//Selects fourth mp3 file chosen for a button
         audio.play(); //Funtion that will play audio 
     };
     sound = true;
