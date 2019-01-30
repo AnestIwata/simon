@@ -1,25 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Simon Game</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-  
-    <!-- Load scripts -->
-    <script type="text/javascript" src="scripts/calc.js"></script>
-
-    <!-- Load Tests -->
-    <script type="text/javascript" src="spec/calcSpec.js"></script>
-  </audio>
 </head>
 <body>
-   <div class="jumbotron">
-   <h1>Welcome to Skysimon!</h1>
-   <p>Click <a href="gameinfo.html">here </a>to see game instructions and history. </p>
+  <div class="jumbotron">
+    <h1>Welcome to Skysimon!</h1>
+    <p>
+      Click <a href="gameinfo.html">here </a>to see game instructions and history. 
+    </p>
     <div id="outer-circle">
     <div id="topleft" class="darkTopLeft"></div>
     <div id="topright" class="darkTopRight"></div>
@@ -29,12 +25,12 @@
       <div id="title" class="font">SKYSIMON!</div>
       <div id="switches">
         <input type="checkbox" class="toggle" id="on">
-        
         <button class="button" id="start">Start</button>
         <input type="checkbox" class="toggle" id="strict">
       </div>
       <div class="poweron">
-        <span>POWER</span><span>STRICT</span>
+        <span>POWER</span>
+        <span>STRICT</span>
       </div>
       <div id="turn"></div>
       <div class="counter">
@@ -44,10 +40,9 @@
   </div>
   
   </div>
-  <img src="../assets/pictures/2overlayDark-opt.jpg" alt="hidden1" id="hidden_preload">
-  <img src="../assets/pictures/3overlayLight-opt.jpg" alt="hidden1" id="hidden_preload">
-  <img src="../assets/pictures/4overlayLight-opt.jpg" alt="hidden1" id="hidden_preload">
-  <img src="../assets/pictures/5overlayLight-opt.jpg" alt="hidden1" id="hidden_preload">
+  <img src="../assets/pictures/2overlayDark-opt.jpg" alt="hidden1" id="hidden_preload1">
+  <img src="../assets/pictures/3overlayLight-opt.jpg" alt="hidden2" id="hidden_preload2">
+  <img src="../assets/pictures/4overlayLight-opt.jpg" alt="hidden3" id="hidden_preload3">
+  <img src="../assets/pictures/5overlayLight-opt.jpg" alt="hidden4" id="hidden_preload4">
   <script  src="js/index.js"></script>
 </body>
-</html> 
