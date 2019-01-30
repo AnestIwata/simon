@@ -47,185 +47,49 @@
   
  ### Testing code:
  
-  On the beginning we need to declare some variables that will be fundamental for our program:
- 
- ```javascript
-  var order = []; *Order of flashing lights*
-  var userOrder = [];  *Order of user input*
-  var flash;  *Number of flashes appealing in the game*
-  var turn;  *Number of turns*
-  var good;  *Checks if player have pushed correct buttons*
-  var gameTurn; *Checks weather it's users turn or game's turn*
-  var sequence;  *Checks wheather sequence input was correct*
-  var strict = false; *Checks if strict button was applied*
-  var sound = true; *Manages sounds in the game*
-  var on = false; *Checks if power button was pressed*
-  var winner;  *Checks if user have won the game* 
- ```
-  
-  We are targeting start button with :
- 
- ```javascript 
-  onButton.addEventListener('click', (event) => {  
-  if (onButton.checked == true) {   *Once the button is checked it will display *
-  on = true;
-  countTurn.innerHTML = "---";
-  } else {
-  on = false;
-  countTurn.innerHTML = "";
-  ```
-  
-  Strict button functionality is based on similar principal as onButton :
- 
- ```javascript  
-  strictButton.addEventListener('click', (event) => {
-  if (strictButton.checked == true) {
-  strict = true;
-  } else {
-  strict = false;
-  }
-  })
-  ```
-  Once the user presses Start button it will trigger main function of the game :
- 
- ```javascript 
-  startButton.addEventListener('click', (event) => {
-   if (on || winner) {
-   play();
-  }
-  });
-  ```
-  Which full fuctionality is enclosed below. Preload images was introduced to fight a lag in loading 
-  images in to the game. 
- 
- ```javascript 
-  function play() {
-  preloadImages([
-  '../assets/pictures/2overlayLight-opt.jpg',
-  '../assets/pictures/3overlayLight-opt.jpg',
-  '../assets/pictures/4overlayLight-opt.jpg',
-  '../assets/pictures/5overlayLight-opt.jpg'
-  ]);
-  winner = false; //user have not won the game yet*
-  order = [];
-  good = true;
-  sequence = 0;
-  countTurn.innerHTML = 1;
-  userOrder = [];
-  flash = 0;
-  turn = 1;
-  for (var i = 0; i < 20; i++) { //Creates an array of 20 numers from 1 to 4 
-  order.push(Math.floor(Math.random() * 4) + 1);
-        
-  }
-  gameTurn = true; //Game will start the sequence and the user will have to repeat it 
-  sequence = setInterval(computerTurn, 1100); //This sequence sets the interval of flashing lights in game 
-  }
-  ```
-  When we:
+  Main function of the game is generateRandomNumbers() 
   
   ```javascript
-  console.log(order);
-  ```
-  
-  We can notice that an array of 20 random numbers from 1 to 4 is created.
-  
-  Next we create a function to let the game make a turn:
-  
- ```javascript
-  function computerTurn() {
-  on = false; //When on is false user is prohibited from pressing a button 
-  if (flash == turn) {
-  $("#on").prop("disabled", false); //Clearing up error with user able to turn off game during sequence
-  clearInterval(sequence); //Clears sequence when games turn is over
-  gameTurn = false;
-  clearColor(); //Clears lit up buttons
-  on = true; //User can start repeating the sequence 
+  function generateRandomNumbers(length) {
+  sequence = [];
+  for (var i = 0; i < length; i++) { //Creates an array of numbers from 1 to 4 depending on length
+    sequence.push(Math.floor(Math.random() * 4) + 1);
   }
-  ```
-  While it is games turn we create a function that lit the buttons and play sounds. Below is a example
-  of one of four functions:
-   
-  ```javascript
-  if (gameTurn) { //When it's still games turn 
-  $("#on").prop("disabled", true);
-  clearColor();
-  setTimeout(() => {
-  if (order[flash] == 1) { //Function responsible for flashing top left button 
-  firstFunction();
-  }
-  ```
-  Now it's time for function that will check user inputs. When last button that user clicked is not
-  equal to the real order :
-  
-  ```javascript
-  function correctOrder() {
-   if (userOrder[userOrder.length - 1] !== order[userOrder.length - 1])
-   good = false;
-  ```
-  When user have repeated order of 20 clicks corretly then winGame will be triggered:
-   
- ```javascript
-  if (userOrder.length == 20 && good) {
-  winGame();
-  }
- ```
-    
- When users input gets incorrect then NO! will be dispalyed in counter window. Also colors will be
- cleared and counter will be reset. When strict mode is checked the game will reset and play function
- wil be trigerred. If not in strict mode user can repeat the sequence.
-    
-  ```javascript
-  if (good == false) {
-  countTurn.innerHTML = "NO!";
-  setTimeout(() => {
-  countTurn.innerHTML = turn;
-  clearColor();
- 
-  if (strict) {
-   play();
-    } else {
-    gameTurn = true;
-    flash = 0;
-    userOrder = [];
-    good = true;
-    sequence = setInterval(computerTurn, 1400);
-     }
-    }, 1400);
-     sound = false;
-    }
-     ```
- When user is correct but he still has remaining rounds to play :
-     
-```javascript
-  if (turn == userOrder.length && good && !winner) {
-  turn++;
-  userOrder = [];
-  gameTurn = true;
-  flash = 0;
-  countTurn.innerHTML = turn;
-  sequence = setInterval(computerTurn, 1300);
-  }
-   }
-  ```
-  if (turn == userOrder.length && good && !winner) {
-  turn++;
-  userOrder = [];
-  gameTurn = true
-  flash = 0;
-  countTurn.innerHTML = turn;
-  sequence = setInterval(computerTurn, 1300);
-  }
-  ```
-  Once the user will finish the game it will trigger :
-  
-  ```javascript
-  function winGame() {
-  countTurn.innerHTML = "WIN";
-  on = false;
-  winner = true;
+  return sequence;
  }
   ```
+ Which creates an array of 20 random numbers from 1 to 4. First we write down the description of the test 
+ suite:
+ 
+ ```javascript
+ const utils = require("..scripts/calc.js");
+ 
+ describe("Testing a random array of numbers",function(){
+  it ("generateRandomNumbers should return a set of a random numbers", function(){
+ ```
+ then we will create an array of random numbers, lets take 5 for example:
+
+ ```javascript
+  random1 = utils.generateRandomNumbers(5);
+  ```
+  We console.log it to see the output. Let's create a second similar array:
+  
+  ```javascript
+  random2 = utils.generateRandomNumbers(5);
+  ```
+  To make sure that the numbers are random we will compare created arrays against each other :
+  
+  ```javascript
+  expect(random1).not.toBe(random2);
+  ```
+  As a next example of testing we can see if the function returns required lenght of numbers:
+  
+  ```javascript
+  it("generateRandomNumbers should return he required lenght of numers", function(){
+    expect(utils.generateRandomNumbers(20).lenght).toBe(20);
+  });
+  ```
+
 
   ### Deployment:
   
