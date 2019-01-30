@@ -23,9 +23,9 @@ const onButton = document.querySelector("#on");
 const startButton = document.querySelector("#start");
 
 function preloadImages(arrayOfImages) {
-$(arrayOfImages).each(function() {
-  $('<img />').attr('src', this).appendTo('body').css('display', 'none');
-});
+  $(arrayOfImages).each(function() {
+    $('<img />').attr('src', this).appendTo('body').css('display', 'none');
+  });
 }
 
 
